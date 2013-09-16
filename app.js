@@ -36,7 +36,8 @@
 		alert(rand1);
 		if (currentGameState[rand1][rand2] === empty) {
 		    currentGameState[rand1][rand2] = cross;
-		    $(this).html('x').addClass('player-x').removeClass('empty');
+		    
+		    $( 'tr:eq( rand2 ) td:eq( rand1 )' ).html('x').addClass('player-x').removeClass('empty');
 		    stop = true;
 		    }
 		}
