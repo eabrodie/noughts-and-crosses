@@ -30,6 +30,7 @@
 		while (currentGameState[y][x] != empty) {
 			x = getRandom(0, 2);
 			y = getRandom(0, 2);
+			alert(x, y);
 		}
             currentGameState[y][x] = cross;
             $(this).html('x').addClass('player-x').removeClass('empty');
