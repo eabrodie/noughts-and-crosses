@@ -26,18 +26,18 @@
             }
         }
 		
-		function playX () {
-			while (currentGameState[y][x] != empty) {
-				x = getRandom(0, 2);
-				y = getRandom(0, 2);
-			}
+	function playX () {
+		while (currentGameState[y][x] != empty) {
+			x = getRandom(0, 2);
+			y = getRandom(0, 2);
+		}
             currentGameState[y][x] = cross;
             $(this).html('x').addClass('player-x').removeClass('empty');
-		}
+	}
 			
-		function getRandom (min, max) {
-    		return Math.random() * (max - min) + min;
-		}
+	function getRandom (min, max) {
+    		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
 
         function getRow(cell) {
             return $(cell).attr('data-loc').charAt(2);
