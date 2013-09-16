@@ -15,18 +15,29 @@
             var y = getRow(this);
             console.log(x + ', ' + y);
             if (currentGameState[y][x] === empty) {
-                currentGameState[y][x] = currentPlayer;
-                if (currentPlayer === nought) {
-                    $(this).html('o').addClass('player-o').removeClass('empty');
-                    currentPlayer = cross;
-                } else {
-                    $(this).html('x').addClass('player-x').removeClass('empty');
-                    currentPlayer = nought;
-                }
+                currentGameState[y][x] = nought;
+                $(this).html('o').addClass('player-o').removeClass('empty');
+                checkWinner();
+                checkDraw();
+				
+                playX();               
                 checkWinner();
                 checkDraw();
             }
         }
+		
+		function playX () {
+			while (currentGameState[y][x] != empty) {
+				x = getRandom(0, 2);
+				y = getRandom(0, 2);
+			}
+            currentGameState[y][x] = cross;
+            $(this).html('x').addClass('player-x').removeClass('empty');
+		}
+			
+		function getRandom (min, max) {
+    		return Math.random() * (max - min) + min;
+		}
 
         function getRow(cell) {
             return $(cell).attr('data-loc').charAt(2);
