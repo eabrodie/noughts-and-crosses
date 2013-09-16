@@ -30,7 +30,7 @@
 		var rand1;
 		var rand2;
 		var stop = false;
-		while (stop = false) {
+		while (stop === false) {
 		rand1 = getRandom(0, 2);
 		rand2 = getRandom(0, 2);
 		alert(rand1);
