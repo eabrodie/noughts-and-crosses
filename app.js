@@ -37,7 +37,37 @@
 		if (currentGameState[rand1][rand2] === empty) {
 		    currentGameState[rand1][rand2] = cross;
 		    
-		    $( 'tr:eq( rand2 ) td:eq( rand1 )' ).html('x').addClass('player-x').removeClass('empty');
+		    if (rand2 === 0) {
+		    	if (rand1 === 0) {
+		    		$( 'td:eq( 0 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    	if (rand1 === 1) {
+		    		$( 'td:eq( 1 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    	if (rand1 === 2) {
+		    		$( 'td:eq( 2 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    } else if (rand2 === 1) {
+		    	if (rand1 === 0) {
+		    		$( 'td:eq( 3 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    	if (rand1 === 1) {
+		    		$( 'td:eq( 4 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    	if (rand1 === 2) {
+		    		$( 'td:eq( 5 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	} 
+		    } else if (rand2 === 2) {
+		    	if (rand1 === 0) {
+		    		$( 'td:eq( 6 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    	if (rand1 === 1) {
+		    		$( 'td:eq( 7 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    	if (rand1 === 2) {
+		    		$( 'td:eq( 8 )' ).html('x').addClass('player-x').removeClass('empty');
+		    	}
+		    }
 		    stop = true;
 		    }
 		}
