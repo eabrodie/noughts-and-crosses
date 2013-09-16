@@ -33,7 +33,7 @@
     		while (stop === false) {
     		    rand1 = getRandom(0, 2);
     		    rand2 = getRandom(0, 2);
-    		    alert(rand1, rand2);
+                console.log(rand1 + ', ' + rand2);
         		if (currentGameState[rand2][rand1] === empty) {
         		    currentGameState[rand2][rand1] = cross;
         		    
