@@ -29,15 +29,15 @@
 	function playX () {
 		var rand1;
 		var rand2;
-		var stop = False;
-		while (stop = False) {
+		var stop = false;
+		while (stop = false) {
 		rand1 = getRandom(0, 2);
 		rand2 = getRandom(0, 2);
 		alert(rand1);
 		if (currentGameState[rand1][rand2] === empty) {
 		    currentGameState[rand1][rand2] = cross;
 		    $(this).html('x').addClass('player-x').removeClass('empty');
-		    stop = True;
+		    stop = true;
 		    }
 		}
 	}
