@@ -39,15 +39,15 @@
         		    
         		    if (rand2 === 0) {
         		    	if (rand1 === 0) {
-        		    		$( 'td:eq( 0 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#game-board td:eq( 0 )' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log('worked');
         		    	}
         		    	else if (rand1 === 1) {
-        		    		$( 'td:eq( 1 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#game-board td:eq( 1 )' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    	else if (rand1 === 2) {
-        		    		$( 'td:eq( 2 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#game-board td:eq( 2 )' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    } else if (rand2 === 1) {
