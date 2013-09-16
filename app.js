@@ -26,56 +26,56 @@
             }
         }
 		
-	function playX () {
-		var rand1;
-		var rand2;
-		var stop = false;
-		while (stop === false) {
-		    rand1 = getRandom(0, 2);
-		    rand2 = getRandom(0, 2);
-		    alert(rand1, rand2);
-    		if (currentGameState[rand2][rand1] === empty) {
-    		    currentGameState[rand2][rand1] = cross;
-    		    
-    		    if (rand2 === 0) {
-    		    	if (rand1 === 0) {
-    		    		$( 'td:eq( 0 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    	if (rand1 === 1) {
-    		    		$( 'td:eq( 1 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    	if (rand1 === 2) {
-    		    		$( 'td:eq( 2 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    } else if (rand2 === 1) {
-    		    	if (rand1 === 0) {
-    		    		$( 'td:eq( 3 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    	if (rand1 === 1) {
-    		    		$( 'td:eq( 4 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    	if (rand1 === 2) {
-    		    		$( 'td:eq( 5 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	} 
-    		    } else if (rand2 === 2) {
-    		    	if (rand1 === 0) {
-    		    		$( 'td:eq( 6 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    	if (rand1 === 1) {
-    		    		$( 'td:eq( 7 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
-    		    	if (rand1 === 2) {
-    		    		$( 'td:eq( 8 )' ).html('x').addClass('player-x').removeClass('empty');
-    		    	}
+    	function playX () {
+    		var rand1;
+    		var rand2;
+    		var stop = false;
+    		while (stop === false) {
+    		    rand1 = getRandom(0, 2);
+    		    rand2 = getRandom(0, 2);
+    		    alert(rand1, rand2);
+        		if (currentGameState[rand2][rand1] === empty) {
+        		    currentGameState[rand2][rand1] = cross;
+        		    
+        		    if (rand2 === 0) {
+        		    	if (rand1 === 0) {
+        		    		$( 'td:eq( 0 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    	if (rand1 === 1) {
+        		    		$( 'td:eq( 1 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    	if (rand1 === 2) {
+        		    		$( 'td:eq( 2 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    } else if (rand2 === 1) {
+        		    	if (rand1 === 0) {
+        		    		$( 'td:eq( 3 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    	if (rand1 === 1) {
+        		    		$( 'td:eq( 4 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    	if (rand1 === 2) {
+        		    		$( 'td:eq( 5 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	} 
+        		    } else if (rand2 === 2) {
+        		    	if (rand1 === 0) {
+        		    		$( 'td:eq( 6 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    	if (rand1 === 1) {
+        		    		$( 'td:eq( 7 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    	if (rand1 === 2) {
+        		    		$( 'td:eq( 8 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    	}
+        		    }
+    		        stop = true;
     		    }
-		        stop = true;
-		    }
-		}
-	}
+    		}
+    	}
 			
-	function getRandom (min, max) {
-    		return Math.floor(Math.random() * (max - min + 1) + min);
-	}
+    	function getRandom (min, max) {
+        		return Math.floor(Math.random() * (max - min + 1) + min);
+    	}
 
         function getRow(cell) {
             return $(cell).attr('data-loc').charAt(2);
