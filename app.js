@@ -39,41 +39,41 @@
         		    
         		    if (rand2 === 0) {
         		    	if (rand1 === 0) {
-        		    		$( '#game-board td:eq( 0 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#one' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log('worked');
         		    	}
         		    	else if (rand1 === 1) {
-        		    		$( '#game-board td:eq( 1 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#two' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    	else if (rand1 === 2) {
-        		    		$( '#game-board td:eq( 2 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#three' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    } else if (rand2 === 1) {
         		    	if (rand1 === 0) {
-        		    		$( 'td:eq( 3 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#four' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    	else if (rand1 === 1) {
-        		    		$( 'td:eq( 4 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#five' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    	else if (rand1 === 2) {
-        		    		$( 'td:eq( 5 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#six' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	} 
         		    } else if (rand2 === 2) {
         		    	if (rand1 === 0) {
-        		    		$( 'td:eq( 6 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#seven' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    	else if (rand1 === 1) {
-        		    		$( 'td:eq( 7 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#eight' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    	else if (rand1 === 2) {
-        		    		$( 'td:eq( 8 )' ).html('x').addClass('player-x').removeClass('empty');
+        		    		$( '#nine' ).html('x').addClass('player-x').removeClass('empty');
         		    		console.log(x + ', ' + y);
         		    	}
         		    }
