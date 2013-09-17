@@ -1,11 +1,11 @@
 (function app($) {
     $(function app() {
-        var empty=0;
+        var empty = 0;
         var nought = 1;
         var cross = 2;
 
         var currentGameState;
-        var currentPlayer = nought;
+        //var currentPlayer = nought;
 
         $('#game-board td').click(onClick);
 
@@ -19,72 +19,63 @@
                 $(this).html('o').addClass('player-o').removeClass('empty');
                 checkWinner();
                 checkDraw();
-				
+                
                 playX();               
                 checkWinner();
                 checkDraw();
             }
         }
-		
-    	function playX () {
-    		var rand1;
-    		var rand2;
-    		var stop = false;
-    		while (stop === false) {
-    		    rand1 = getRandom(0, 2);
-    		    rand2 = getRandom(0, 2);
+        
+        function playX () {
+            var rand1;
+            var rand2;
+            var stop = false;
+            while (stop === false) {
+                rand1 = getRandom(0, 2);
+                rand2 = getRandom(0, 2);
                 console.log(rand1 + ', ' + rand2);
-        		if (currentGameState[rand2][rand1] === empty) {
-        		    currentGameState[rand2][rand1] = cross;
-        		    
-        		    if (rand2 === 0) {
-        		    	if (rand1 === 0) {
-        		    		$( '#one' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log('worked');
-        		    	}
-        		    	else if (rand1 === 1) {
-        		    		$( '#two' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    	else if (rand1 === 2) {
-        		    		$( '#three' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    } else if (rand2 === 1) {
-        		    	if (rand1 === 0) {
-        		    		$( '#four' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    	else if (rand1 === 1) {
-        		    		$( '#five' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    	else if (rand1 === 2) {
-        		    		$( '#six' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	} 
-        		    } else if (rand2 === 2) {
-        		    	if (rand1 === 0) {
-        		    		$( '#seven' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    	else if (rand1 === 1) {
-        		    		$( '#eight' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    	else if (rand1 === 2) {
-        		    		$( '#nine' ).html('x').addClass('player-x').removeClass('empty');
-        		    		console.log(x + ', ' + y);
-        		    	}
-        		    }
-    		        stop = true;
-    		    }
-    		}
-    	}
-			
-    	function getRandom (min, max) {
-        		return Math.floor(Math.random() * (max - min + 1) + min);
-    	}
+                if (currentGameState[rand2][rand1] === empty) {
+                    currentGameState[rand2][rand1] = cross;
+                    
+                    if (rand2 === 0) {
+                        if (rand1 === 0) {
+                            $( '#one' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                        else if (rand1 === 1) {
+                            $( '#two' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                        else if (rand1 === 2) {
+                            $( '#three' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                    } else if (rand2 === 1) {
+                        if (rand1 === 0) {
+                            $( '#four' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                        else if (rand1 === 1) {
+                            $( '#five' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                        else if (rand1 === 2) {
+                            $( '#six' ).html('x').addClass('player-x').removeClass('empty');
+                        } 
+                    } else if (rand2 === 2) {
+                        if (rand1 === 0) {
+                            $( '#seven' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                        else if (rand1 === 1) {
+                            $( '#eight' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                        else if (rand1 === 2) {
+                            $( '#nine' ).html('x').addClass('player-x').removeClass('empty');
+                        }
+                    }
+                    stop = true;
+                }
+            }
+        }
+            
+        function getRandom (min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+        }
 
         function getRow(cell) {
             return $(cell).attr('data-loc').charAt(2);
